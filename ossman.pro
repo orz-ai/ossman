@@ -9,14 +9,20 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    fend/uicommon/basedialog.cpp \
     fend/uilogin/logindialog.cpp \
+    fend/uilogin/uimain.cpp \
     main.cpp
 
 HEADERS += \
-    fend/uilogin/logindialog.h
+    fend/uicommon/basedialog.h \
+    fend/uilogin/logindialog.h \
+    fend/uilogin/uimain.h
 
 FORMS += \
-    fend/uilogin/logindialog.ui
+    fend/uicommon/basedialog.ui \
+    fend/uilogin/logindialog.ui \
+    fend/uilogin/uimain.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
