@@ -24,7 +24,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_4"/>
+      <widget class="QLineEdit" name="lineEditLoginName"/>
      </item>
      <item>
       <spacer name="verticalSpacer">
@@ -40,14 +40,14 @@
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="labelLoginName_2">
+      <widget class="QLabel" name="labelSecretId">
        <property name="text">
         <string>Secret ID</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_3"/>
+      <widget class="QLineEdit" name="lineEditSecretId"/>
      </item>
      <item>
       <spacer name="verticalSpacer_2">
@@ -63,14 +63,14 @@
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="labelLoginName_3">
+      <widget class="QLabel" name="labelSecretKey">
        <property name="text">
         <string>Secret Key</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_2"/>
+      <widget class="QLineEdit" name="lineEditSecretKey"/>
      </item>
      <item>
       <spacer name="verticalSpacer_3">
@@ -86,24 +86,37 @@
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="labelLoginName_4">
+      <widget class="QLabel" name="labelRemark">
        <property name="text">
         <string>备注</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="lineEditRemark"/>
      </item>
      <item>
-      <widget class="QCheckBox" name="checkBox">
+      <spacer name="verticalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkSaveSession">
        <property name="text">
         <string>记住会话</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="buttonLogin">
        <property name="text">
         <string>登录</string>
        </property>

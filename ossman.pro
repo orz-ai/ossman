@@ -10,17 +10,20 @@ CONFIG += c++17
 
 SOURCES += \
     fend/uicommon/basedialog.cpp \
+    fend/uicommon/emptydialog.cpp \
     fend/uilogin/logindialog.cpp \
     fend/uilogin/uimain.cpp \
     main.cpp
 
 HEADERS += \
     fend/uicommon/basedialog.h \
+    fend/uicommon/emptydialog.h \
     fend/uilogin/logindialog.h \
     fend/uilogin/uimain.h
 
 FORMS += \
     fend/uicommon/basedialog.ui \
+    fend/uicommon/emptydialog.ui \
     fend/uilogin/logindialog.ui \
     fend/uilogin/uimain.ui
 
