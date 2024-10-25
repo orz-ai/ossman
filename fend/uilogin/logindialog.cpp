@@ -17,6 +17,11 @@ LoginDialog::LoginDialog(QWidget *parent) :
     ui->labelSecretKey->setProperty("style_font", "h5");
     ui->labelRemark->setProperty("style_font", "h5");
 
+    ui->buttonLogin->setProperty("style_font", "h5");
+    ui->buttonLogin->setProperty("style_button", "main");
+
+    connect(ui->buttonLogin, &QPushButton::clicked, this, &LoginDialog::onBtnLoginClicked);
+
     this->resize(400, 450);
 }
 

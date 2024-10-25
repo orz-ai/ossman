@@ -9,17 +9,32 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    bend/service/log/basiclogger.cpp \
+    config/loggerproxy.cpp \
     fend/uicommon/basedialog.cpp \
     fend/uicommon/emptydialog.cpp \
     fend/uilogin/logindialog.cpp \
     fend/uilogin/uimain.cpp \
-    main.cpp
+    helper/filehelper.cpp \
+    main.cpp \
+    middle/globalmanager.cpp \
+    middle/model/cloudmodel.cpp \
+    middle/signal/signalmanager.cpp
 
 HEADERS += \
+    bend/service/log/basiclogger.h \
+    config/common.h \
+    config/global.h \
+    config/loggerproxy.h \
     fend/uicommon/basedialog.h \
     fend/uicommon/emptydialog.h \
     fend/uilogin/logindialog.h \
-    fend/uilogin/uimain.h
+    fend/uilogin/uimain.h \
+    helper/filehelper.h \
+    middle/globalmanager.h \
+    middle/model/cloudmodel.h \
+    middle/model/dbmodel.h \
+    middle/signal/signalmanager.h
 
 FORMS += \
     fend/uicommon/basedialog.ui \
