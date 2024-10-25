@@ -1,6 +1,8 @@
 
 #include "globalmanager.h"
 
+#include <bend/mgr/cloudmanager.h>
+
 
 
 GlobalManager::GlobalManager()

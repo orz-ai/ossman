@@ -9,7 +9,13 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    bend/mgr/cloudmanager.cpp \
+    bend/service/cloud/coscloud.cpp \
+    bend/service/cloud/kodocloud.cpp \
+    bend/service/cloud/osscloud.cpp \
+    bend/service/cloud/s3cloud.cpp \
     bend/service/log/basiclogger.cpp \
+    config/baseexception.cpp \
     config/loggerproxy.cpp \
     fend/uicommon/basedialog.cpp \
     fend/uicommon/emptydialog.cpp \
@@ -19,10 +25,18 @@ SOURCES += \
     main.cpp \
     middle/globalmanager.cpp \
     middle/model/cloudmodel.cpp \
-    middle/signal/signalmanager.cpp
+    middle/signal/signalmanager.cpp \
+    plugin/pluginmanager.cpp
 
 HEADERS += \
+    bend/mgr/cloudmanager.h \
+    bend/service/cloud/commoncloud.h \
+    bend/service/cloud/coscloud.h \
+    bend/service/cloud/kodocloud.h \
+    bend/service/cloud/osscloud.h \
+    bend/service/cloud/s3cloud.h \
     bend/service/log/basiclogger.h \
+    config/baseexception.h \
     config/common.h \
     config/global.h \
     config/loggerproxy.h \
@@ -34,7 +48,8 @@ HEADERS += \
     middle/globalmanager.h \
     middle/model/cloudmodel.h \
     middle/model/dbmodel.h \
-    middle/signal/signalmanager.h
+    middle/signal/signalmanager.h \
+    plugin/pluginmanager.h
 
 FORMS += \
     fend/uicommon/basedialog.ui \

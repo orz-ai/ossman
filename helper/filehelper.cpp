@@ -50,7 +50,7 @@ QList<QStringList> FileHelper::readAllCsv(const QString &filePath)
     return records;
 }
 
-void FileHelper::writeFile(const QStringList lines, QString &filePath)
+void FileHelper::writeFile(const QStringList lines, const QString &filePath)
 {
     QFile file(filePath);
     if (!file.open(QIODevice::WriteOnly)){
