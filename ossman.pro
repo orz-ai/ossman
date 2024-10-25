@@ -14,9 +14,11 @@ SOURCES += \
     bend/service/cloud/kodocloud.cpp \
     bend/service/cloud/osscloud.cpp \
     bend/service/cloud/s3cloud.cpp \
+    bend/service/config/versionconfig.cpp \
     bend/service/log/basiclogger.cpp \
     config/baseexception.cpp \
     config/loggerproxy.cpp \
+    config/versioncmd.cpp \
     fend/uicommon/basedialog.cpp \
     fend/uicommon/emptydialog.cpp \
     fend/uilogin/logindialog.cpp \
@@ -35,11 +37,13 @@ HEADERS += \
     bend/service/cloud/kodocloud.h \
     bend/service/cloud/osscloud.h \
     bend/service/cloud/s3cloud.h \
+    bend/service/config/versionconfig.h \
     bend/service/log/basiclogger.h \
     config/baseexception.h \
     config/common.h \
     config/global.h \
     config/loggerproxy.h \
+    config/versioncmd.h \
     fend/uicommon/basedialog.h \
     fend/uicommon/emptydialog.h \
     fend/uilogin/logindialog.h \

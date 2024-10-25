@@ -26,13 +26,14 @@ public:
 
     // bucket operations
     virtual QList<MyBucket> buckets() = 0;
-    virtual bool isBUcketExists(const QString& bucketName) = 0;
+    virtual bool isBucketExists(const QString& bucketName) = 0;
     virtual QString getBucketLocation(const QString& bucketName) = 0;
     virtual void createBucket(QString& bucketName, const QString& location) = 0;
     virtual void deleteBucket(const QString& bucketName, const QString& localtion) = 0;
 
     // objects operations
-    virtual void getObjects(const QString& bucketName, const QString& key, const QString& location, const TransProgressCallback& callback) = 0;
+    virtual QList<MyObject> getObjects(const QString& bucketName, const QString& dir) = 0;
+    virtual void getObject(const QString& bucketName,const QString& key,const QString& localPath,const TransProgressCallback& callback) = 0;
     virtual void putObject(const QString& bucketName, const QString& key, const QString& location, const TransProgressCallback& callback) = 0;
 
 signals:
