@@ -1,4 +1,4 @@
-[ÖĞÎÄ](./readme_zh.md)
+[ä¸­æ–‡](./readme_zh.md)
 
 # ossman
 
