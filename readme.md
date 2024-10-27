@@ -1,3 +1,5 @@
+[жпнд](./readme_zh.md)
+
 # ossman
 
 ossman is a tool designed to unify and simplify cloud object storage operations, integrating basic functionality from various leading cloud storage platforms. It provides a unified API for different cloud storage services, reducing the complexity of managing multiple platforms.
