@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>static/configs/cosconfig.json</file>
         <file>static/docs/errorcode.csv</file>
         <file>static/img/logo.png</file>
         <file>static/imgs/bucket.png</file>
@@ -25,12 +24,13 @@
         <file>static/imgs/Search.png</file>
         <file>static/imgs/Trans-1.png</file>
         <file>static/imgs/Trans-2.png</file>
-        <file>static/imgs/上传.png</file>
-        <file>static/imgs/下载.png</file>
+        <file>static/imgs/upload.png</file>
+        <file>static/imgs/download.png</file>
         <file>static/qss/default.qss</file>
         <file>static/sql/login_info.sql</file>
         <file>static/testing/business.json</file>
         <file>static/testing/custom.json</file>
         <file>static/versions/config_default.json</file>
+        <file>static/configs/ossconfig.json</file>
     </qresource>
 </RCC>

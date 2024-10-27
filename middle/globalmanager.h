@@ -32,7 +32,7 @@ public:
     explicit GlobalManager(QObject *parent = nullptr);
     ~GlobalManager();
 
-    GlobalManager* instance();
+    static GlobalManager* instance();
     void init(int argc, char *argv[]);
 
     LoggerProxy *mLog = nullptr;

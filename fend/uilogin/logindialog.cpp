@@ -1,6 +1,7 @@
 
 #include "logindialog.h"
 #include "ui_logindialog.h"
+#include "config/common.h"
 
 LoginDialog::LoginDialog(QWidget *parent) :
     EmptyDialog(parent),
@@ -8,8 +9,7 @@ LoginDialog::LoginDialog(QWidget *parent) :
 {
     ui->setupUi(body());
 
-    // TODO
-    setTitle(QString::fromLocal8Bit("µÇÂ¼"));
+    setTitle(STR("µÇÂ¼"));
     ui->buttonLogin->setDefault(true);
 
     ui->labelLoginName->setProperty("style_font", "h5");

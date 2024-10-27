@@ -4,6 +4,7 @@
 #include <QDir>
 #include <QFile>
 #include <QJsonDocument>
+#include <QDebug>
 
 FileHelper::FileHelper()
 {
@@ -19,7 +20,8 @@ QString FileHelper::readAllText(const QString &filePath)
         return content;
     }
 
-    throw "¶ÁÈ¡ÎÄ¼þÊ§°Ü";
+    qDebug() << filePath << " not exist";
+    throw "file not exist";
 }
 
 QVariant FileHelper::readAllJson(const QString &filePath)

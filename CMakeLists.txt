@@ -22,7 +22,7 @@ file(GLOB_RECURSE SOURCES "*.cpp" "*.h")
 file(GLOB_RECURSE EXCLUDED_FILES "${CMAKE_BINARY_DIR}/**/*")
 list(REMOVE_ITEM SOURCES ${EXCLUDED_FILES})
 
-
-add_executable(ossman ${SOURCES})
+qt5_add_resources(RESOURCES_FILES resource.qrc)
+add_executable(ossman ${SOURCES} ${RESOURCES_FILES})
 
 target_link_libraries(ossman Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Sql)
