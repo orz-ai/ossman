@@ -5,7 +5,7 @@
 #include <QString>
 
 
-struct LoginInfo
+struct LoginInfoEntity
 {
     QString name;
     QString secretId;

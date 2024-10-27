@@ -2,9 +2,7 @@
 #ifndef FILEHELPER_H
 #define FILEHELPER_H
 
-
 #include <QObject>
-
 
 class FileHelper : public QObject
 {
@@ -19,7 +17,7 @@ public:
     static void writeFile(const QStringList lines, const QString& filePath);
 
     static QString joinPath(const QString& path1, const QString& path2);
-    static bool mkPath(const QString& path);
+    static bool mkdir(const QString& path);
 
 signals:
 

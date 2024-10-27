@@ -11,7 +11,7 @@
 class VersionCmd : public VersionConfig
 {
 public:
-    VersionCmd();
+    VersionCmd(int argc, char *argv[]);
 
     void setVersion();
     bool isValid();

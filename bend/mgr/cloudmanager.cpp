@@ -10,7 +10,6 @@ CloudManager::CloudManager(QObject *parent)
 
 void CloudManager::login(QString secretId, QString secretKey)
 {
-    QList<MyBucket> buckets = GM->pluginMgr->
 }
 
 void CloudManager::getBuckets()
@@ -45,12 +44,12 @@ void CloudManager::putObject(const QString &jobId, const QString &bucketName, co
 
 QString CloudManager::currentBucketName() const
 {
-
+    return "";
 }
 
 QString CloudManager::currentDir() const
 {
-
+    return "";
 }
 
 void CloudManager::bucketsAlready(const QList<MyBucket> &buckets)
@@ -58,3 +57,7 @@ void CloudManager::bucketsAlready(const QList<MyBucket> &buckets)
 
 }
 
+CloudManager::~CloudManager()
+{
+
+}

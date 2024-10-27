@@ -7,7 +7,6 @@
 
 FileHelper::FileHelper()
 {
-
 }
 
 QString FileHelper::readAllText(const QString &filePath)
@@ -75,7 +74,7 @@ QString FileHelper::joinPath(const QString &path1, const QString &path2)
     return QDir::cleanPath(path);
 }
 
-bool FileHelper::mkPath(const QString &path)
+bool FileHelper::mkdir(const QString &path)
 {
     QDir dir;
     return dir.mkdir(path);

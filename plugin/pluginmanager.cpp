@@ -14,11 +14,10 @@ PluginManager::~PluginManager()
 
 CommonCloud *PluginManager::clouds() const
 {
-
+    return nullptr;
 }
 
 void PluginManager::installPlugins(int argc, char *argv[])
 {
-    VersionCmd
 }
 

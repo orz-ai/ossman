@@ -1,11 +1,7 @@
 
 #include "coscloud.h"
-#include "src/config/exception.h"
-#include "src/config/errorcode.h"
 #include <QDebug>
 
-// 此头文件要放到最后，否则可能会报错
-#include "cos_api.h"
 
 using  namespace qcloud_cos;
 

@@ -16,11 +16,11 @@ using TransProgressCallback = std::function<void(uint64_t transferred_size,
  * @brief The CommonCloud class
  * it's a base cloud operation class.
  */
-class CommonCloud : public QObject
+class CommonCloud
 {
-    Q_OBJECT
+
 public:
-    explicit CommonCloud(QObject *parent = nullptr);
+    CommonCloud(){}
 
     virtual QList<MyBucket> login(const QString& secretId, const QString& secretKey) = 0;
 

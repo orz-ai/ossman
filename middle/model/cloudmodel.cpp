@@ -3,6 +3,5 @@
 
 MyBucket::MyBucket()
 {
-
 }
 

@@ -7,3 +7,8 @@ LoggerProxy::LoggerProxy(QObject *parent)
 
 }
 
+LoggerProxy::~LoggerProxy()
+{
+
+}
+
