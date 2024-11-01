@@ -4,9 +4,11 @@
 
 
 #include "commoncloud.h"
-
 #include <QObject>
 #include <QWidget>
+
+
+
 
 
 namespace qcloud_cos{

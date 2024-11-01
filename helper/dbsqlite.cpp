@@ -6,7 +6,7 @@
 
 DbSqlite::DbSqlite()
 {
-//    db = QSqlDatabase::addDatabase("QSQLITE");
+    db = QSqlDatabase::addDatabase("QSQLITE");
     qDebug() << "[DbSqlite] add database";
 }
 

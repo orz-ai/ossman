@@ -37,7 +37,7 @@ private:
     void doLog(CONF::LOG_LEVEL, const QVariant& var, bool up) const;
 
 signals:
-    void sigLog(const QString& file, int line, const QString& func, void* tid, int level, const QVariant& var, bool up) const;
+//    void sigLog(const QString& file, int line, const QString& func, void* tid, int level, const QVariant& var, bool up) const;
 
 };
 

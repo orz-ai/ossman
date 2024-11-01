@@ -36,6 +36,15 @@ namespace CONF
         static const QString DIR = ":/static/imgs/dir.png";
     };
 
+    namespace PLATFORM {
+        static const int QINIU = 1;
+        static const int ALIYUN = 2;
+        static const int TENCENT = 3;
+        static const int GOOGLE = 4;
+        static const int BAIDU = 5;
+        static const int AMAZON = 6;
+    }
+
     namespace SQLITE
     {
         static const QString NAME = FileHelper::joinPath(PATH::TEMP, "ossman.db");

@@ -1,6 +1,7 @@
 
 #include "cloudmanager.h"
 #include "middle/globalmanager.h"
+#include "plugin/pluginmanager.h"
 
 CloudManager::CloudManager(QObject *parent)
     : QObject{parent}
@@ -10,6 +11,7 @@ CloudManager::CloudManager(QObject *parent)
 
 void CloudManager::login(QString secretId, QString secretKey)
 {
+    QList<MyBucket> buckets = GM->pluginMgr->clouds()->login(secretId, secretKey);
 }
 
 void CloudManager::getBuckets()

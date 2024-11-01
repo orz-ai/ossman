@@ -3,7 +3,7 @@
 #include "middle/globalmanager.h"
 
 #include <QApplication>
-
+#include <QNetworkInterface>
 
 int main(int argc, char *argv[])
 {
@@ -15,3 +15,6 @@ int main(int argc, char *argv[])
     ld.show();
     return a.exec();
 }
+
+
+

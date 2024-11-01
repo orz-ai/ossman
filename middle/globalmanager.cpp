@@ -39,21 +39,18 @@ void GlobalManager::init(int argc, char *argv[])
     modelMgr = new ModelManager(this);
 
     // init database path
-//    FileHelper::mkdir(CONF::PATH::TEMP);
-//
-//    // init log path
-//    FileHelper::mkdir(CONF::PATH::LOG_DIR);
-//
-//    // init plugins
-//    pluginMgr->installPlugins(argc, argv);
+    FileHelper::mkdir(CONF::PATH::TEMP);
+    // init log path
+    FileHelper::mkdir(CONF::PATH::LOG_DIR);
+    // init plugins
+    pluginMgr->installPlugins(argc, argv);
 
     // init stylesheet
     QString qssStr = FileHelper::readAllText(CONF::PATH::DEFAULT_QSS_PATH);
-    qDebug() << qssStr;
     qApp->setStyleSheet(qssStr);
 
     // init database
-//    dbMgr->init();
+    dbMgr->init();
 
 }
 

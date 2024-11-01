@@ -7,7 +7,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-find_package(Qt5 COMPONENTS Core Gui Widgets Sql REQUIRED)
+find_package(Qt5 COMPONENTS Core Gui Widgets Sql Network REQUIRED)
 
 # FIXME change to your local's CMAKE_PREFIX_PATH
 set(CMAKE_PREFIX_PATH "D:\\Qt\\5.15.2\\msvc2019_64")
@@ -25,4 +25,4 @@ list(REMOVE_ITEM SOURCES ${EXCLUDED_FILES})
 qt5_add_resources(RESOURCES_FILES resource.qrc)
 add_executable(ossman ${SOURCES} ${RESOURCES_FILES})
 
-target_link_libraries(ossman Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Sql)
+target_link_libraries(ossman Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Sql Qt5::Network)

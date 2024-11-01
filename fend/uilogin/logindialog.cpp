@@ -1,7 +1,11 @@
 
+#include <QJsonObject>
 #include "logindialog.h"
 #include "ui_logindialog.h"
 #include "config/common.h"
+#include "middle/globalmanager.h"
+#include "config/api.h"
+#include <bend/gateway.h>
 
 LoginDialog::LoginDialog(QWidget *parent) :
     EmptyDialog(parent),
@@ -32,7 +36,6 @@ LoginDialog::~LoginDialog()
 
 void LoginDialog::updateLoginInfo()
 {
-
 }
 
 bool LoginDialog::eventFilter(QObject *watched, QEvent *event)
@@ -42,15 +45,16 @@ bool LoginDialog::eventFilter(QObject *watched, QEvent *event)
 
 void LoginDialog::onBtnLoginClicked()
 {
-
+    QJsonObject params;
+    params["secretId"] = ui->lineEditSecretId->text().trimmed();
+    params["secretKey"] = ui->lineEditSecretKey->text().trimmed();
+    GM->gateway->send(API::LOGIN::NORMAL, params);
 }
 
 void LoginDialog::onLoginSucceed()
 {
-
 }
 
 void LoginDialog::onLoginError(int api, const QString &msg, const QJsonValue &req)
 {
-
 }

@@ -1,9 +1,13 @@
 
 #include "coscloud.h"
+#include "helper/httphelper.h"
+#include "helper/signhelper.h"
+#include "middle/globalmanager.h"
 #include <QDebug>
+#include <iostream>
 
 
-using  namespace qcloud_cos;
+using namespace qcloud_cos;
 
 
 CosCloud::CosCloud()
@@ -16,8 +20,27 @@ CosCloud::~CosCloud()
 
 QList<MyBucket> CosCloud::login(const QString &secretId, const QString &secretKey)
 {
-    QList<MyBucket> buckets;
+    QString url = "";
+    QMap<QString, QString> params;
+    QMap<QString, QString> headers;
 
+    QString authorization = SignHelper::generateAliSignature(
+            secretId,
+            secretKey,
+            "GET",
+            "",
+            "",
+            headers,
+            params
+    );
+
+    HttpHelper *helper = new HttpHelper();
+    headers.insert("Authorization", authorization);
+
+    QString result = helper->get(url, headers);
+    delete helper;
+
+    QList<MyBucket> buckets;
     return buckets;
 }
 
@@ -43,7 +66,7 @@ void CosCloud::createBucket(QString &bucketName, const QString &location)
 
 }
 
-void CosCloud::deleteBucket(const QString &bucketName, const QString& location)
+void CosCloud::deleteBucket(const QString &bucketName, const QString &location)
 {
 
 }
@@ -56,12 +79,14 @@ QList<MyObject> CosCloud::getObjects(const QString &bucketName, const QString &d
 }
 
 
-void CosCloud::putObject(const QString &bucketName, const QString &key, const QString &localPath, const TransProgressCallback &callback)
+void CosCloud::putObject(const QString &bucketName, const QString &key, const QString &localPath,
+                         const TransProgressCallback &callback)
 {
 
 }
 
-void CosCloud::getObject(const QString &bucketName, const QString &key, const QString &localPath, const TransProgressCallback &callback)
+void CosCloud::getObject(const QString &bucketName, const QString &key, const QString &localPath,
+                         const TransProgressCallback &callback)
 {
 
 }

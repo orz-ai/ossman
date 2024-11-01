@@ -1,4 +1,4 @@
-QT       += core gui sql
+QT       += core gui sql network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,9 +17,11 @@ SOURCES += \
     bend/service/cloud/osscloud.cpp \
     bend/service/cloud/s3cloud.cpp \
     bend/service/config/versionconfig.cpp \
+    bend/service/config/versionjson.cpp \
     bend/service/db/logininfo.cpp \
     bend/service/db/sqlite/logininfosqlite.cpp \
     bend/service/log/basiclogger.cpp \
+    bend/service/log/qdebuglogger.cpp \
     config/baseexception.cpp \
     config/loggerproxy.cpp \
     config/versioncmd.cpp \
@@ -29,6 +31,8 @@ SOURCES += \
     fend/uilogin/uimain.cpp \
     helper/dbsqlite.cpp \
     helper/filehelper.cpp \
+    helper/httphelper.cpp \
+    helper/signhelper.cpp \
     main.cpp \
     middle/globalmanager.cpp \
     middle/model/cloudmodel.cpp \
@@ -46,11 +50,15 @@ HEADERS += \
     bend/service/cloud/osscloud.h \
     bend/service/cloud/s3cloud.h \
     bend/service/config/versionconfig.h \
+    bend/service/config/versionjson.h \
     bend/service/db/logininfo.h \
     bend/service/db/sqlite/logininfosqlite.h \
     bend/service/log/basiclogger.h \
+    bend/service/log/qdebuglogger.h \
+    config/api.h \
     config/baseexception.h \
     config/common.h \
+    config/errorcode.h \
     config/global.h \
     config/loggerproxy.h \
     config/versioncmd.h \
@@ -60,6 +68,8 @@ HEADERS += \
     fend/uilogin/uimain.h \
     helper/dbsqlite.h \
     helper/filehelper.h \
+    helper/httphelper.h \
+    helper/signhelper.h \
     middle/globalmanager.h \
     middle/model/cloudmodel.h \
     middle/model/dbmodel.h \
